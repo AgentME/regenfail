@@ -1,0 +1,18 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Babel bug test.",
+  "scripts": {
+    "build": "browserify -t babelify -do bundle.js main.js",
+    "watch": "watchify -v -t babelify -do bundle.js main.js"
+  },
+  "author": "Chris Cowan <agentme49@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^5.8.35",
+    "babelify": "^6.4.0",
+    "browserify": "^13.0.0",
+    "watchify": "^3.7.0"
+  }
+}
