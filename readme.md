@@ -1,5 +1,14 @@
 This repo is an example of a bug between Babel 6 and core-js.
 
+Instructions:
+
+```
+npm install
+npm run build
+```
+
+then open index.html and look at the browser console.
+
 Issue:
 
 Babel-transpiled generator and async functions throw the error "Can't find
