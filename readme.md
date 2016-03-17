@@ -55,7 +55,10 @@ Possible Solution:
 
 From https://github.com/zloirock/core-js/issues/76, it appears that core-js
 overrides `Object.getOwnPropertyNames` because in IE11, the native function
-sometimes throws errors when passed an iframe or other window. A possible fix
+sometimes throws errors when passed an iframe or other window. ~~A possible fix
 would be to make `Object.getOwnPropertyNames` only use its special-case
 behavior if it's passed a Window object that is not equal to the global
-`window`, such as an iframe or other window.
+`window`, such as an iframe or other window.~~
+
+So it turns out there was just a typo in the `Object.getOwnPropertyNames`
+replacement. It wasn't intended to always return the original properties.
